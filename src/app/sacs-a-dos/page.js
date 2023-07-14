@@ -1,28 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 // import styles from "./page.module.css";
-import styles from "./Products.module.css";
-import productStyles from "./Product.module.css";
-// export default function Home() {
-//   return (
-//     <>
-//       <main className={styles.main}>
-//         <div className={styles.description}>
-//           <p>
-//             Get started by editing&nbsp;
-//             <code className={styles.code}>src/app/page.js</code>
-//           </p>
-//         </div>
-//       </main>
-//     </>
-//   );
-// }
+import styles from "../Products.module.css";
+import productStyles from "../Product.module.css";
+import Head from "next/head";
+import getAllProducts from "../../../getData/getAllProducts";
 
-export default async function Home() {
+export default async function SacsADos() {
 
-  const response = await fetch('http://localhost:3000/api/products')
-  // const response = await fetch('https://jsonplaceholder.typicode.com/users')
-  const products = await response.json()
+  // const response = await fetch('http://localhost:3000/api/products')
+  // const products = await response.json()
+  const products = await getAllProducts()
 
 // console.log('products555', products )
 
